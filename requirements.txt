@@ -1,0 +1,31 @@
+# --- Core Data Science & EDA ---
+numpy               # Numerical computing (Linear Algebra)
+pandas              # Data manipulation and DataFrames
+matplotlib          # Basic plotting and visualization
+seaborn             # Advanced statistical data visualization
+scipy               # Scientific computing and advanced math
+
+# --- Classical & Unsupervised ML ---
+scikit-learn        # Regression, Classification, Clustering (K-Means, PCA)
+statsmodels         # Statistical modeling and testing
+
+# --- Advanced ML (Boosting & Trees) ---
+xgboost             # Extreme Gradient Boosting
+lightgbm            # Fast, distributed gradient boosting
+catboost            # Handling categorical features automatically
+
+# --- Deep Learning & Neural Networks ---
+torch               # PyTorch Core
+torchvision         # Computer Vision for PyTorch
+torchaudio          # Audio processing for PyTorch
+# tensorflow        # (Optional) Uncomment if you want to include TF/Keras
+# keras             # (Optional)
+
+# --- Utilities & Environment ---
+jupyter             # To run .ipynb notebooks
+tqdm                # Progress bars for training loops
+joblib              # For saving/loading classical ML models
+python-dotenv       # For managing API keys/environment variables
+
+# --- Model finetuning ---
+optuna
