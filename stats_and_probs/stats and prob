@@ -1,0 +1,659 @@
+                                                STATISTICS
+
+There are 2 types of stats
+
+1 - Descriptive :
+
+it consists of organizing and summarizing of the data . Some of the basic strategies we use is
+
+    1 ) - Central Tendency : Mean , Median and Mode
+    2 ) - Measure of Dispersion - Variance , Standard deviation
+
+2 - Inferential :
+
+It is used to give some sort of conclusion or inferences from a dataset using some experiments . Soem of teh experiments that we use are
+
+    Z - test , T - test etc.
+
+The data that we use is called as sample data . The conclusions are made for some other data known as Population Data
+
+
+
+
+POPULATION V/S SAMPLE :
+
+EX : 100k people are living in a country or state . This number ( 100k ) is known as the Population . Lets say we need to complete a task i.e
+     collecting all the weight of every person . This is very hard so we take a small amount of people ( 10k ) . This small amount of people
+     is known as the Sample
+
+
+
+
+MEASURE OF CENTRAL TENDENCY :
+
+Ex : POPULATION - N , SAMPLE - n
+
+1 ) - MEAN ( N ) represented by mue :
+
+    mue = summation i=1 to N ( xi / N )
+
+      MEAN ( n ) represented by x bar :
+
+    x bar  = summation i=1 to n ( xi / N )
+
+2 ) - MEDIAN :
+
+    The central most value of the dataset , when we order the dataset in ascending order
+
+3 ) - MODE :
+
+    The number that gets repeated many times in a dataset is known as mode.
+
+
+
+
+MEASURE OF DISPERSION :
+
+1 ) - VARIANCE :
+
+POPULATION ( N ) :
+
+    sigma ^ 2 = summation i=1 to N ( xi - mue ) ^ 2 / N
+
+SAMPLE ( n ) :
+
+    S ^ 2 = summation i=1 to n ( xi - x bar ) ^ 2 / n - 1
+
+    if we use n instead of n-1 we are underestimating the true population variance . So instead of n we divide by n - 1 i.e.
+    also known as degree of freedom .
+
+2 ) - STANDARD DEVIATION :
+
+Tells us how far away from the eman we are
+
+POPULATION ( N ) :
+
+    sigma = under root sigma ^ 2
+
+SAMPLE ( n ) :
+
+    S = under root S ^ 2
+
+
+
+
+RANDOM VARIABLES :
+
+X --> function --> Value --> Process / Experiments . Lets X is a random variable that stores the value of the event tossing a coin .
+So if a head comes we store 1 and if a tails come we store 0 .
+
+There are 2 types of random variables :
+
+1 ) - DISCRETE :
+
+    EX : Rolling a die , tossing a coin .
+
+2 ) - CONTINUOUS :
+
+    EX : Prediction of rain for the next day
+
+
+
+
+
+PERCENTILES AND QUARTILES :
+
+Percentile :
+
+A percentile is a values below which a certain percentage of observations lie . Lets say we have an array that contains the following number :
+
+A = [ 1 , 2 , 3 , 3 , 3 , 2 , 1 , 1 , 4 , 4 , 4 , 5 , 5 , 6 , 8 , 9 , 9 , 10 ]
+
+Percentile of x = No of values below x / n * 100
+
+Percentile of 9 = 15 / 18 * 100
+
+                = 83 . 34 %
+
+This means that 83 . 34 % of values in the array are less than 9 .
+
+
+Quartiles :
+
+25 percentile = 1st quartile
+50 percentile = 2nd quartile
+75 percentile = 3rd quartile
+
+
+INTER QUARTILE RANGE :
+
+This helps us know the rage from which a numerical category values can lie . This takes care of the outliers .
+
+Lower fence = Q1 - 1.5 ( IQR )
+Higher fence = Q3 + 1.5 ( IQR )
+
+Q1 = ( 25 Percentile * ( n + 1 ) ) / 100
+Q3 = ( 75 Percentile * ( n + 1 ) ) / 100
+
+IQR = Q3 - Q1
+
+
+
+
+
+
+CORRELATION AND COVARIANCE :
+
+These both are statistical measures that are used to determine the relationship between 2 variables . Both are used to understand how changes
+in 1 variable are associated with changes in the other variable .
+
+COVARIANCE :
+
+If the variables tend to increase and decrease together , the covariance is positive . If one tends to increase and the other tends to decrease
+the covariance is negative
+
+Covariance of an entire dataset = summation i=1 to n ( xi - xbar )( yi - ybar)/n-1
+
+where xi and yi are the datapoints of a random variable x and ybar and xbar are sample mean .
+
+Advantages :
+
+quantify the relationship between x an y .
+
+Disadvantages :
+
+does not have a specific value range . can range from - infinity to + infinity .
+
+
+CORRELATION :
+
+It is also of 2 types :
+
+1 ) PEARSON CORRELATION :
+
+it ranges from -1 to 1 .
+
+rho(x,y) = Covariance(x,y)  / ( sigma x * sigma y )
+
+The more the value tends towards +1 the more +ve correlation bw x and y
+The more the value tends towards -1 the more -ve correlation bw x and y
+
+
+2 ) - SPEARMAN RANK CORRELATION
+
+Pearson correlation is not able to capture the correlation between non linear data . To solve this we use Spearman rank correlation
+
+Rs = cov(Rank of X , Rank of Y)/( sigma ( rank of X) * sigma ( rank of y ) )
+
+Lets say we have a dataset
+
+X   Y   R(x)    R(y)
+1   2   2       1
+3   4   3       2
+5   6   4       3
+7   8   5       5
+0   7   1       4
+
+This Correlation helps us in feature selection .
+
+
+
+
+                                                    PROBABILITY
+
+ADDITION RULE :
+
+1 ) - MUTUALLY EXCLUSIVE EVENT :
+
+Two events are mutually  exclusive if they cannot occur at the same time . EX : Tossing a coin
+
+P ( H or T ) = P ( H ) + P ( T )  { Additive rule for mutually exclusive events }
+
+2 ) - NON MUTUALLY EXCLUSIVE EVENT :
+
+EX : Taking a card from the deck
+
+P ( K or HEART ) = P ( K ) + P ( HEART ) - P ( K and HEART )
+
+
+MULTIPLICATION RULE :
+
+1 ) - INDEPENDENT :
+
+2 events are independent if they do not affect one another . EX : tossing a coin { first getting H and then T }
+
+P ( H AND T ) = P ( H ) * P ( T ) = 1/2 * 1/2 = 1/4
+
+2 ) - DEPENDENT :
+
+2 events are dependent iff they affect each other . EX : Taking a kind out from a deck and then the queen from the deck .
+P ( K ) = 4/52 , P ( Q ) = 4/51
+
+{ Bayes Theorem / Conditional Probability } P ( K AND Q ) = P ( K ) * P ( Q / K ) = 4/52 * 4/51
+
+
+
+PROBABILITY DISTRIBUTION FUNCTIONS :
+
+Tells us how the probabilities are distributed over the values of a random variable .
+
+Ages = { .. ..... }  --> Continuous random variable
+
+There are 2 main types of PDF :
+
+1 ) - Probability Mass Functions ( PMF ) :
+
+These are used for discrete random variables .
+
+EX : Rolling a dice {1,2,3,4,5,6} . P(1)=P(2)=...=P(6)
+Here we draw a histogram where the y axis represents the probability of the thing that we are finding and the x axis represents the thing we
+are finding the probability of
+
+EX : For a PMF of rolling a dice on y axis we will plot probability 1/6 , 2/6 and so on and on the x axis we will write 1,2,..6 .
+So when we will start plotting we will get a straight histogram from 1 to 6 where each of the number have probability of 1/6
+
+CUMMULATIVE DENSITY FUNCTION ( CDF ) :
+
+Here the x and the y axis remains the same but the way we plot gets different . For 1 we get prob 1/6 and for 2 we have to find probability
+of 1 and 2 i.e. 2/6 and this goes on this 6 . So here we get a histogram which is in the increasing order .
+
+2 ) - Probability Density Function ( PDF ) :
+
+These are used for continuous random variable .
+
+X = Ages = { ... }
+
+Here we are drawing a histogram and lets say we have a mean of 40 and we have a SD of 5 and lets consider this is a symmetric / normal
+distribution and we have plotted on y axis 0.01 , 0.02 till 0.05 for 40 . That does not mean that P(X=40) = 0.05 i.e. it does not mean
+that probability of the random variable being equal to 40 is 5% .
+
+In the y axis of the PDF , the slope of the function is present that is why we have the highest slope at 40 , because at 40 the
+slope is the most steep . This is also known as gradient of the PDF .
+
+
+
+
+TYPES OF PROBABILITY DISTRIBUTION
+
+1 ) - Bernoulli Distribution --> Outcomes are binary ( pmf ) ==> Discrete random variable
+2 ) - Binomial Distribution --> pmf
+3 ) - Normal / Gaussion --> pdf ==> Can make assumptions and based on that our efficiency of model can be increased
+4 ) - Poisson Distribution --> pmf
+5 ) - Log Normal Distribution --> pdf
+6 ) - Uniform Distribution --> pmf
+
+1 ) - BERNOULLI DISTRIBUTION :
+
+It is the simplest probability distribution . It represents the probability distribution of a random variable that has exactly 2 possible
+outcomes : success ( p ) and failure ( 1 - p ) . It is used to model binary outcomes such as a yes / no question . In order to create this
+distribution we are going to use pmf .
+
+EX : tossing a coin { H , T }
+
+P ( X = H ) = 0.5 = p , P ( X = T ) = 1-0.5 = 1-p .
+
+Parameters :
+
+0 <= p <= 1
+q = 1 - p
+
+PMF = p^k * (1-p)^1-k , if k = 1 , P ( k=1 ) = p , P ( k=0 ) = q
+
+      { q=1-p ; k = 0
+PMF = {
+      { p     ; k = 1
+
+    MEAN :
+
+    EX : getting success in a match is 60% while getting failure is 40% . Find the mean . So failure = 0 and success - 1
+    E(x) = summation from k = 0 to 1 ( k * p(k) )
+         = 0 * 0.40 + 1 * 0.60
+         = 0.60 = p(1) = p
+
+    MEDIAN :
+
+
+             {  0   ,   p < 1/2
+    median = {  [0,1]   ,   p = 1/2
+             {  1   ,   p > 1/2
+
+
+    MODE :
+
+    if p > q ==> mode = p , else mode = q
+
+    VARIANCE :
+
+    sigma^2 = 0.40 * ( 0 - 0.4 )^2 + 0.6 * ( 1 - 0.6 )^2
+            = 0.24
+            = p*q
+
+    STANDARD DEVIATION :
+
+    sigma = underroot ( p*q )
+
+2 ) - BINOMIAL DISTRIBUTION :
+
+It is a distribution with parameters n and p is the discrete probability distribution of the number of successes in s sequence of n independent
+experiments , each asking a yes-no question and each with its own Boolean valued outcome : success ( p ) and failure ( q )
+
+EX : Tosing a coin 10 times
+
+We are specifically working on discrete random variable . Every outcome of the experiment is binary . These experiments are performed for n
+trials . when i am tossing a coin 10 times my n becomes 10
+
+
+
+
+                    STANDARD NORMAL DISTRIBUTION
+
+random variable X = { 1,2,3,4,5 } mean = 3 , SD = 1.41 approx 1 . If we plot a gaussian or bell curve we will get a normal distribution.
+if we want to convert this distribution where the mean becomes 0 and SD = 1 . This kind of distributions are called Standard normal distribution
+
+To convert this we will use Z - Score
+
+Z - score = ( xi - mue / sigma )
+
+for 1 = 1-3/1 = -2
+for 2 = 2-3/1 = -1
+for 3 = 3-3/1 = 0
+
+Y = { -2,-1,0,1,2 }
+
+Q - Lets say we have a curve which has a mean of 4 and a SD = 1 . Now find out how many SD is 4.25 away from the mean .
+A - xi = 4.25 , mue = 4 , sigma = 1
+Z - score = 4.25 - 4 / 1 = 0.25
+
+This means that 4.25 is 0.25 SD away from the mean .
+
+This will help when we have numerical features which have different units . ex : age , weight , height , salary . Now this will help in unit
+conversion so that it becomes easy for the model to compute . The process is called standardization .
+
+
+
+                    INFERENTIAL STATS
+
+HYPOTHESIS TESTING
+
+1 ) - Ho ( Null hypothesis ) - The assumption you are beginning with
+
+2 ) - H1 ( Alternate hypothesis ) - The assumption that we put or give based on our observations or given by someone else
+
+3 ) - Experiment --> Stats analysis
+
+4 ) - Accept the null hypothesis or reject the null hypothesis
+
+EX : Colleges in district A says its avg passing rate is 85 % . A new college opened and it found out from a sample of 100 students that
+the passing rate was 90% with a standard deviation of 4 % .
+
+Ho - avg passing rate is 85 % . mue = 85%
+h1 - avg passing rate is not equal to 85 % . mue =/ 85%
+
+
+
+
+P - VALUE :
+
+It describes how likely you are to have found a particular set of observations if the null hypothesis were true . It is used to determine
+whether to reject the null hypothesis or not .
+
+EX : tossing a coin 100 times . Ho - the coin is fair , H1 - the coin is not fair . We will get a bell curve where mean is 50 and SD = 10 .
+We will set a confidence interval lets say  between 30 and 70 . So that means if we get values between 30 and 70 we can say that the coin
+is fair . Outside this interval the coin is not fair .
+
+Significance Value ( alpha ) - 0.05 . Confidence interval ( CI ) = 1-0.05 = 0.95 . So in the curve where we set the interval the area would
+be 95 % CI and the rest 5 % will be divided into 2 parts left and right into 2.5 % . Lets say the p value comes in the region that belongs to
+the 5 % i.e. p > Significance value ( SV ) or p < SV , then we can reject the null hypothesis . if it is present in the SV region we fail to
+reject the null hypothesis .
+
+
+                                Z - TEST
+
+Z test and t test are for average values whereas Chi square is for categorical data and ANNOVA is for variance
+
+Conditions for using Z test:
+
+1 ) - need to know population SD    2 ) - The sample size should be greater than 30
+
+Q - The avg height in a city is 168 cm . The SD is 3.9 cm . A doctor wants to find out if the mean is different . Measured height of 36 individuals
+and found the mean to be 169.5 . what is the null and the alternate hypothesis . if the CI is 95% is there enough evidence to reject the null
+hypothesis .
+
+A - population mean ( mue ) = 168cm , sigma = 3.9 , n = 36 , xbar = 169.5 cm , CI = 0.95 , alpha = 1-0.95 = 0.05 . SV = 0.05
+
+Ho - the avg height is 168 cm , Ha - the avg height is not 168 cm . Now based on the CI we will draw a decision boundary . This is known as
+2 Tail test . To find out where we need to place this decision boundary we will find the Z score . As the distribution is symmetric if we find
+z score for one end the -ve of that value will become the z score for the other end .
+
+1 - 0.025 = 0.975 ==> Z - score . Now we need to check thi value i.e. 0.975 in the Z table and find the Z score corresponding to that . From the
+table we are getting the value 1.96 Z - score . In the opposite end we get -1.96 . So if we find a statistical analysis and we get the value
+between this range of Z - score then the null hypothesis is true meaning that we failed to reject the null hypothesis .
+
+Z TEST ( Zd ) = xbar - mue / sigma/root(n) = 169.5 - 168 / 3.9 / root ( 36 ) = 2.31
+
+Zd = 2.31 . As 2.31 > 1.96 , so we reject the null hypothesis . Now we will use this new Z score and graph another graph where we will get
+the side value as 0.01044 i.e 1 - 0.98956 , this 0.9 value we got from reversing the Z score using the Z table . So the leftover area is
+1 - 2 * 0.01044 = 0.97912 .
+
+P VALUE = 0.01044 + 0.01044 = 0.02
+p<0.05 ==> 0.02 < 0.05 . We need to reject the null hypothesis .
+
+The final conclusion is that the avg height is not 168 cm . So the avg height seems to be increasing based on the sample data .
+
+Q - a factory manufactures a bulb with avg warranty of 5 years with SD = 0.5 , A worker believes that it is less than 5 years . Takes a sample
+of 40 bulbs and finds the avg to be 4.8 years . at 2 % significance level is it enough to support the idea that the warranty should be revised
+
+A - mue = 5 , sigma = 0.5 , xbar = 4.8 , n = 40 , alpha = 0.02 , CI = 98 % = 0.98 .
+
+Ho - The avg warranty is 5 years . Ha - the avg warranty is less than 5 years .
+
+Zd = 4.8 - 5 / 0.5 / root(40) = -2.53
+
+area under the curve with z score -2.53 = 0.0570
+
+p value = 0.057 . comparing p value with SV . 0.057 > 0.02 . Therefore we fail to reject the null hypothesis .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                            T TEST
+
+in z test whenever we perform analysis using z score we require sigma ( population SD ) --> already known . When we dont know sigma we use t test
+which uses S ( Sample SD ) instead of sigma
+
+t = xbar - mue / S / root(n) . Here we use the t table , in this t table there is one more parameter degree of freedom ( dof ) which is n-1
+
+Q - in the population the average IQ is 100 . researchers want to test a new medicine and see if it affects positively or negatively . A sample
+of 30 was taken and the avg IQ was 140 with 20 SD . did medicine affect the intelligence
+
+A - mue = 100 , xbar = 140 , S = 20 , n = 30 , dof = 29 , alpha = 0.05 , CI = 0.95 , Ho - Avg iq = 100 , Ha - Avg iq not equal to 100 .
+( 2 tail test ) .
+
+If we look into the t table with dof 29 and two tail as 0.05 we get the value of z score 0.2045 . if t test is between +-0.2045 we fail to
+reject the null hypothesis and if it is outside we rejct the null hypothesis .
+
+t test = 140-100/20/root(30) = 10.96 . As value of t test is outside the range we reject the null hypothesis . Conclusion - The medicine
+has affected IQ and it has increased it .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                                            Z TEST V/S T TEST
+
+if we know the population SD use Z test , if not use the t test .
+
+If we know population SD and if the sample size is greater than 30 we use Z test , else we use t test .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                                            TYPE 1 AND TYPE 2 ERRORS
+
+TYPE 1 - we reject the null hypothesis but in reality it is true
+
+TYPE 2 - we fail to reject the null hypothesis and it is false
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                                            BAYES THEOREM
+
+This is used for dependent events where conditional probability is used . Ex : Picking a K and a Q from a deck of cards
+
+P ( K and Q ) = P ( K ) * ( P ( Q / K ) --> Probability of getting queen given King was selected )
+              = 4/52 * 4/51
+
+P ( K AND Q ) = P ( Q AND K )
+P ( K ) * P ( Q/K ) = P ( Q ) * P ( K/Q )
+P ( Q/K ) = P ( Q ) * P ( K/Q ) / P ( K ) ==> This equation is called bayes theorem .
+
+Now in ML , in the Naive Bayes algorithm , lets say we have 3 independent features and the label y is dependent on them , so we implement it
+using the following formula
+
+P ( y/x1 x2 x3 ) = P ( y ) * P ( x1 x2 x3 / y ) / P ( x1 x2 x3 ) --> This is the equation for naive bayes theorem .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                                            CONFIDENCE INTERVAL AND MARGIN OF ERROR
+
+lets say we have a CI of 95 % . Now if the z test value lies in this CI interval we are going to accept the null hypothesis . So to find the
+value of the confidence interval we will use point estimate
+
+So lets say xbar is the point estimate to find mue . So if my xbar is 2.5 and mue is 3 . the xbar could also be greater than mue . Now this gap
+between the xbar and mue is the drawback of point estimate . so to counter that we use a range or interval , in this example we set it
+to 2 to 4 . meaning if the mue comes between 2 to 4 we will accept it .
+
+Now to find this values i.e. 2 and 4 . we will use the following formula
+
+        point estimate +- margin of error
+
+        xbar +- Z alpha/2 * sigma / root(n) ( This is for Z test , if we are using Z test , if we are using T test we will use T alpha/2 )
+
+EX : In the verbal section of CAT the SD =  100 . a sample of 30 tests were taken and had a mean of 520 . Construct 95% CI abput the mean
+
+alpha = 0.05 , alpha/2 = 0.025 , 1-0.025 = 0.975 , This is the area under the curve and it has a standard deviation of 1.96 that we found
+out using the Z table .
+
+Lower CI = 520 - 1.96 * 100 / root(25) = 480.6
+Higher CI = 520 + 1.96 * 100 / root(25) = 559.2
+
+Based on the above stats we can say that , i am 95% sure that the avg CAT exam score will lie between 480 and 560 .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+                                            CHI SQUARE TEST
+
+The chi square test for Goodness of fit . This test claims about population proportions . It is a non parametric test that is performed on
+the categorical data .
+
+There is a population of male that likes different colors of a bike . So the theory is 1/4 likes likes black , 1/4 likes blue
+and 1/2 likes white . They collected a sample and found out 22 , 17 and 59 liked the colors respectively . So using the chi squared test we
+will see if the sample data is a goodness of fit test for the theory .
+
+Ho - The data meets the expectation . Ha - the data doesnt meet the expectation . alpha = 0.05 , CI = 95% dof = 3 -1 = 2 ( categorical )
+Using the chi square table we find that the critical value is around 5.991 . If chi^2 is greater 5.991 we will reject Ho else fail to
+reject Ho
+
+Chi square ( chi^2 ) = sigma ( observed -  expected ) ^ 2 / expected
+                     = ( 22-25 )^2 / 25 + ( 17-25 )^2 / 25 + ( 59-50 )^2/50
+                     = 9/25 + 64/25 + 81/50
+                     = 73/25 + 81/50
+                     = 146+81/50
+                     = 227/50
+                     = 45.4
+
+As we can se the value of chi square is gretaer than 5.991 we will reject the null hypothesis .
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                                            ANNOVA
+
+ANNOVA or analysis of variance is a test used to compare the means of 2 or more groups . Two important components are :
+
+1 ) - FACTORS ( DEPENDENT OR INDEPENDENT )
+2 ) - LEVELS
+
+EX : We have a medicine lets say paracetamol this becomes our factor and different dosages that is 125mg , 250mg , 500mg becomes the levels
+
+
+
+ASSUMPTIONS IN ANNOVA:
+
+1 ) - Normality of sampling distribution of mean - the dist. of sample mean is normally distributed .
+2 ) - Absence of outliers
+3 ) - Homogenity of Variance - Population variance in different levels of each independent variables are same
+sigma1^2 = sigma2^2 = sigma3^2
+4 ) - Samples are independent and random
+
+
+
+TYPES OF ANNOVA :
+
+1 ) - One way Annova : 1 factor with at-least 2 levels and these levels are independent
+
+ex : doctor wants to test a new medication to decrease headache . They split participants into 3 groups [ 10mg , 20mg , 30mg ]
+
+2 ) - Repeated Measure Annova : same as one way but the levels are dependent .
+
+ex : a person is running 3 days simultaneously . Here the levels are the days and as the same person is running on 3 days the distance
+may vary .
+
+3 ) - Factorial Annova - 2 or more factors each  of which have at least 2 levels and this levels may either be dependent or independent .
+
+ex : same ex as above but we include the factor of gender .
+
+
+
+HYPOTHESIS TESTING / PARTITIONING OF VARIANCE IN ANNOVA :
+
+Ho - mue0 = mue1 = mue2 = ... = muek ( mue = mean )
+
+Ha - one of the sample mean is not equal .
+
+Test Statistics :
+
+F - TEST = variance between samples / variance within sample
+
+variance between samples - this means that we first calculate the variance of each sample and then see what is the variance between
+these samples
+
+Q - Doctors want to test medicine . [ 15mg , 30mg , 45mg ] . Doctors then ask to rate the headache after taking medicine . are there any
+difference between 3 condition using alpha = 0.052
+
+15mg    30mg    45mg
+9   7   4
+8   6   3
+7   6   2
+8   7   3
+8   8   4
+9   7   3
+8   6   2
+
+ANS -
+
+Ho - mue15 = mue30 = mue45
+Ha - at least one of the mean is not equal
+
+alpha = 0.05 CI = 0.95
+
+Degree of Freedom :
+
+N ( total sample ) = 21 , n ( sample size ) = 7 , a = 3
+
+df(bw samples) = 2 ( df1 )
+df(within sample) = 18 = N - a ( df2 )
+df(total sample) = 20
+
+Using the value of alpha and value of df1 and df2 we will find the critical value from the F table which here is 3.5546
+
+DECISION RULE : if F is greater than 3.5546 we will reject the null hypothesis .
+
